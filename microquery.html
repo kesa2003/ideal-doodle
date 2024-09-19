@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            background-image: url(ball.jbg);
+
+        
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            form {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Personal Information</h1>
+    <form>
+        <label for="fname">First Name:</label>
+        <input type="text" placeholder="Enter your Firstname" id="fname" name="fname" required/>
+
+        <label for="Lname">Last Name:</label>
+        <input type="text" placeholder="Enter your Lastname" id="Lname" name="Lname" required/>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+
+        <label for="Age">Age:</label>
+        <input type="text" id="Age" name="Age" required/>
+
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="DOB" name="DOB" required/>
+
+        <label for="email">Email:</label>
+        <input type="email" placeholder="email@gmail.com" id="email" name="email" required/>
+
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" required/>
+
+        <label for="phone">Mobile:</label>
+        <input type="tel" id="phone" name="phone" required/>
+
+        <label>Hobbies:</label>
+        <input type="checkbox" id="drawing" name="hobbies" value="drawing" required/>
+        <label for="drawing">Drawing</label>
+        <input type="checkbox" id="music_hearing" name="hobbies" value="music hearing" required/>
+        <label for="music_hearing">Music Hearing</label>
+        <input type="checkbox" id="games" name="hobbies" value="games" required/>
+        <label for="games">Games</label>
+
+        <label for="address"><strong>Address:</strong></label>
+        <textarea name="address" id="address" rows="4" required></textarea>
+
+        <input type="button" value="Submit" required/>
+        <input type="button" value="Reset" required/>
+    </form>
+</body>
+</html>
